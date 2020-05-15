@@ -44,6 +44,14 @@ const CartProvider: React.FC = ({ children }) => {
   const addToCart = useCallback(
     async product => {
       // TODO ADD A NEW ITEM TO THE CART
+      const filteredProducts = products.filter(
+        current => current.id === product.id,
+      );
+
+      if (filteredProducts.length > 0) {
+        return;
+      }
+
       setProducts([...products, product]);
 
       await AsyncStorage.setItem(
@@ -61,6 +69,7 @@ const CartProvider: React.FC = ({ children }) => {
 
       products[updateIndex].quantity += 1;
       setProducts([...products]);
+      console.log(products);
     },
     [products],
   );
