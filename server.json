@@ -2,27 +2,27 @@
   "products": [
     {
       "id": "123",
-      "title": "Nome do produto 01",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
+      "title": "Tambaqui",
+      "image_url": "https://panoramadaaquicultura.com.br/wp-content/uploads/2015/07/149_Tambaqui.jpg",
       "price": 50
     },
     {
       "id": "1234",
-      "title": "Nome do produto 02",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 60
+      "title": "Farinha do Uarini",
+      "image_url": "https://http2.mlstatic.com/farinha-do-uarini-ovinha-D_NQ_NP_896601-MLB20394163551_082015-F.jpg",
+      "price": 8
     },
     {
       "id": "12345",
-      "title": "Nome do produto 03",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 70
+      "title": "Pupunha",
+      "image_url": "https://cdn.emtempo.com.br/img/Facebook/170000/pupunha_00172571_0_201909161454.jpg",
+      "price": 5
     },
     {
       "id": "123456",
-      "title": "Nome do produto 04",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 80
+      "title": "Cupuaçu",
+      "image_url": "https://www.greenme.com.br/wp-content/uploads/2015/10/cupuacu-1200x600.jpg",
+      "price": 12
     }
   ]
 }

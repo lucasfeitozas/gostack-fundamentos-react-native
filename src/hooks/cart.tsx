@@ -41,17 +41,17 @@ const CartProvider: React.FC = ({ children }) => {
     loadProducts();
   }, []);
 
-  const updateStorage = async (): Promise<void> => {
+  const updateStorage = useCallback(async (): Promise<void> => {
     await AsyncStorage.clear();
     await AsyncStorage.setItem(
       '@GoMarketplace:products',
       JSON.stringify(products),
     );
-  };
+  }, [products]);
 
-  // useEffect(() => {
-  //   updateStorage();
-  // }, [updateStorage]);
+  useEffect(() => {
+    updateStorage();
+  }, [updateStorage]);
 
   const addToCart = useCallback(
     async product => {
@@ -71,10 +71,9 @@ const CartProvider: React.FC = ({ children }) => {
       } else {
         setProducts([...products, { ...product, quantity: 1 }]);
       }
-
-      updateStorage();
     },
-    [products, updateStorage],
+
+    [products],
   );
 
   const increment = useCallback(
@@ -87,10 +86,8 @@ const CartProvider: React.FC = ({ children }) => {
           return product;
         }),
       );
-
-      updateStorage();
     },
-    [products, updateStorage],
+    [products],
   );
 
   const decrement = useCallback(
@@ -105,10 +102,8 @@ const CartProvider: React.FC = ({ children }) => {
           })
           .filter(product => product.quantity >= 1),
       );
-
-      updateStorage();
     },
-    [products, updateStorage],
+    [products],
   );
 
   const value = React.useMemo(
